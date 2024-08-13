@@ -5,6 +5,7 @@
 ### 最低配置要求
 
 Python: 3.10.12 以上版本。
+transformers：目前适配的最新版本为4.40。
 
 操作系统: 建议使用 Linux 操作系统运行以避免`xformers`库安装问题。建议使用 NVIDIA GPU 以防止兼容性问题。
 
@@ -33,7 +34,7 @@ CUDA_VISIBLE_DEVICES=0 python cli_demo.py
 如果您有多张GPU，您可以通过以下代码执行多卡拉起模型，并将模型的不同层分布在不同的GPU上。
 
 ```shell
-python cli_demo_multi_gpu.py
+python cli_demo_multi_gpus.py
 ```
 
 在 `cli_demo_multi_gpu.py` 中，我们使用了 `infer_auto_device_map`
